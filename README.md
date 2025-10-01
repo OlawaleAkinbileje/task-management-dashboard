@@ -80,7 +80,7 @@ This project was developed as part of the AltSchool Africa third-semester final 
 
 | Variable          | Description                          | Example Value                  |
 |-------------------|--------------------------------------|--------------------------------|
-| `NEXTAUTH_SECRET` | JWT encryption secret (required)     | `X7y9z2k4p8q3w5e6r7t8y9u0i1o2p3a4s5d6f7g8h9j0k` |
+| `NEXTAUTH_SECRET` | JWT encryption secret (required)     | `Pd3jL6mnhrd7tPWf3rVWsACPbGaZnj9c5Nzz0PBf/8g=` |
 | `NEXTAUTH_URL`    | App URL for callbacks                | `http://localhost:3001`        |
 
 Generate `NEXTAUTH_SECRET` with:
