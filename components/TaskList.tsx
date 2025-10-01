@@ -53,7 +53,7 @@ export default function TaskList({ initialTasks }: TaskListProps) {
         setModalOpen(false);
     };
 
-    const handleTaskDeleted = (id: number) => {
+    const handleTaskDeleted = (id: string) => {
         setTasks(tasks.filter((t) => t.id !== id));
     };
 
