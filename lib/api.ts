@@ -48,3 +48,28 @@ export async function fetchTasks(
     throw error;
   }
 }
+
+export async function fetchTask(id: string): Promise<Task> {
+  try {
+    const session = await getServerSession(authOptions);
+    if (!session?.accessToken) {
+      throw new Error("Unauthorized: No valid session or access token");
+    }
+
+    const res = await fetch(`${API_BASE}/${id}`, {
+      headers: {
+        Authorization: `Bearer ${session.accessToken}`,
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`Task not found: ${res.statusText}`);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("fetchTask error:", error);
+    throw error;
+  }
+}
